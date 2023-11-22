@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XvH3ZxwBDc0BKcZqTGfow69Fxc2oqUGVvwc9oFbVsl9hlrfm1c3bNked/SlxDZUtUKrS0Uxc2fvLBbYKUh+aSw==",
+  "dgSpecHash": "6G0UACuHdDmHhar7lbcvrwU5uU8ywZGbJ85t/Ixu67GmFOn39PDOSd2kXaBS7JY2Z2+lB2lYE/jZuTjVqAV26w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\amontals\\source\\repos\\Login\\Login\\Login.csproj",
+  "projectFilePath": "C:\\Users\\amontals\\source\\repos\\amontals83work\\Login\\Login.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amontals\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\amontals\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
