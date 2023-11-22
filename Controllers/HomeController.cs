@@ -1,4 +1,5 @@
 using Login.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -13,6 +14,14 @@ namespace Login.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
+        [Authorize]
+        public IActionResult Menu()
+        {
+            return View();
+        }
+
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
