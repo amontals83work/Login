@@ -17,7 +17,7 @@ namespace Login
         {
             try
             {
-                var query = "SELECT * FROM Usuarios WHERE Email = @Email AND Password = @Password";
+                var query = "SELECT * FROM Usuarios WHERE Email = @Email AND Password = @Password AND (IdPerfil<>0 OR Coordinador<>0)";
                 var result = _context.Usuarios.FromSqlRaw(query, new SqlParameter("@Email", model.Email), new SqlParameter("@Password", model.Password)).FirstOrDefault();
 
                 return result != null ? 1 : 0;
