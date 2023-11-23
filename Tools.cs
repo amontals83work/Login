@@ -1,4 +1,5 @@
 ﻿using Login.Models;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 namespace Login
@@ -16,10 +17,10 @@ namespace Login
         {
             try
             {
-                var query = $"SELECT COUNT(*) FROM Usuarios WHERE Email = '{model.Email}' AND Password = '{model.Password}'";
-                var result = _context.Database.ExecuteSqlRaw(query);
+                var query = "SELECT * FROM Usuarios WHERE Email = @Email AND Password = @Password";
+                var result = _context.Usuarios.FromSqlRaw(query, new SqlParameter("@Email", model.Email), new SqlParameter("@Password", model.Password)).FirstOrDefault();
 
-                return result > 0 ? 1 : 0;
+                return result != null ? 1 : 0;
             }
             catch
             {

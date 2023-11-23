@@ -26,8 +26,8 @@ namespace Login.Controllers
             {
                 var newUser = new Usuario
                 {
+                    IdUsuario = model.IdUsuario,
                     Nombre = model.Nombre,
-                    Apellidos = model.Apellidos,
                     Email = model.Email,
                     Password = model.Password,
                 };
@@ -81,6 +81,14 @@ namespace Login.Controllers
         public IActionResult Login()
         {
             return View();
+        }
+
+        [HttpGet]
+        [Authorize]
+        public IActionResult Logout()
+        {
+            Response.Cookies.Delete("MiCookie");
+            return RedirectToAction("Login");
         }
 
         [HttpGet]
